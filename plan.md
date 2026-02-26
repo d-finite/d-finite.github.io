@@ -181,7 +181,7 @@ a:hover { color: #DA7756; }
 
 **动画参考**：jonbarron index.html 第 53-69 行的 JavaScript
 
-**完成标志**：[ ]  
+**完成标志**：[x]  
 **完成后操作**：`git add index.html && git commit -m "feat: add research section with hover animations"`
 
 **完成汇报模板**：
