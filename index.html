@@ -8,75 +8,52 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <table style="width: 100%; max-width: 800px; margin: 0 auto; padding: 40px 20px;">
-      <!-- Header Section -->
-      <tr>
-        <td>
-          <table style="width: 100%;">
-            <tr>
-              <td class="name">Your Name</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-
-      <!-- Personal Info Section -->
-      <tr>
-        <td>
-          <table style="width: 100%;">
-            <tr>
-              <td style="width: 63%; vertical-align: top;">
-                <p>
-                  Welcome to my academic homepage. I am a researcher interested in
-                  computer vision, machine learning, and computational photography.
-                </p>
-                <p>
-                  I am currently affiliated with [Your Affiliation / University].
-                </p>
-              </td>
-              <td style="width: 37%; text-align: center;">
-                <img
-                  src="images/avatar.jpg"
-                  alt="Profile Picture"
-                  class="avatar"
-                  style="width: 140px; height: 140px;"
-                />
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-
-      <!-- Contact Links -->
-      <tr>
-        <td style="text-align: center; padding: 20px 0;">
-          <div class="paper-links">
-            <a href="mailto:your.email@example.com">Email</a>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:800px;">
+      <!-- Header Section with Name and Avatar -->
+      <tr style="padding:0px">
+        <td style="padding:2.5%;width:63%;vertical-align:middle">
+          <p class="name">Your Name</p>
+          <p>
+            Welcome to my academic homepage. I am a researcher interested in
+            computer vision, machine learning, and computational photography.
+          </p>
+          <p>
+            I am currently affiliated with [Your Affiliation / University].
+          </p>
+          <p style="text-align:center">
+            <a href="mailto:your.email@example.com">Email</a> &nbsp;/&nbsp;
+            <a href="#">CV</a> &nbsp;/&nbsp;
+            <a href="https://scholar.google.com">Scholar</a> &nbsp;/&nbsp;
             <a href="https://github.com/your-username">GitHub</a>
-            <a href="https://scholar.google.com">Google Scholar</a>
-            <a href="#">CV</a>
-          </div>
+          </p>
+        </td>
+        <td style="padding:2.5%;width:37%;max-width:37%">
+          <img
+            src="images/avatar.jpg"
+            alt="Profile Picture"
+            class="avatar"
+            style="width:100%;max-width:100%;border-radius:50%;"
+          />
         </td>
       </tr>
+    </table>
 
-      <!-- Divider -->
-      <tr>
-        <td class="section-divider"></td>
-      </tr>
-
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:800px;">
       <!-- Research Section -->
       <tr>
-        <td>
+        <td style="padding:16px;width:100%;vertical-align:middle">
           <h2>Research</h2>
           <p>
             I study problems in computer vision and machine learning. Below are some of my recent projects and papers.
           </p>
         </td>
       </tr>
+    </table>
 
+    <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:800px;">
       <!-- Paper 1 -->
       <tr onmouseout="paper1_stop()" onmouseover="paper1_start()" bgcolor="#ffffd0">
-        <td style="padding: 16px; width: 20%; vertical-align: middle;">
+        <td style="padding:16px;width:20%;vertical-align:middle">
           <div class="one">
             <div class="two" id="paper1_image">
               <img src="images/paper1_alt.jpg" width="100%" />
@@ -93,7 +70,7 @@
             paper1_stop();
           </script>
         </td>
-        <td style="padding: 8px; width: 80%; vertical-align: middle;">
+        <td style="padding:8px;width:80%;vertical-align:middle">
           <a href="#">
             <span class="papertitle">Sample Research Paper Title 1</span>
           </a>
@@ -114,7 +91,7 @@
 
       <!-- Paper 2 -->
       <tr onmouseout="paper2_stop()" onmouseover="paper2_start()">
-        <td style="padding: 16px; width: 20%; vertical-align: middle;">
+        <td style="padding:16px;width:20%;vertical-align:middle">
           <div class="one">
             <div class="two" id="paper2_image">
               <img src="images/paper2_alt.jpg" width="100%" />
@@ -131,7 +108,7 @@
             paper2_stop();
           </script>
         </td>
-        <td style="padding: 8px; width: 80%; vertical-align: middle;">
+        <td style="padding:8px;width:80%;vertical-align:middle">
           <a href="#">
             <span class="papertitle">Sample Research Paper Title 2</span>
           </a>
@@ -152,7 +129,7 @@
 
       <!-- Paper 3 -->
       <tr onmouseout="paper3_stop()" onmouseover="paper3_start()" bgcolor="#ffffd0">
-        <td style="padding: 16px; width: 20%; vertical-align: middle;">
+        <td style="padding:16px;width:20%;vertical-align:middle">
           <div class="one">
             <div class="two" id="paper3_image">
               <img src="images/paper3_alt.jpg" width="100%" />
@@ -169,7 +146,7 @@
             paper3_stop();
           </script>
         </td>
-        <td style="padding: 8px; width: 80%; vertical-align: middle;">
+        <td style="padding:8px;width:80%;vertical-align:middle">
           <a href="#">
             <span class="papertitle">Sample Research Paper Title 3</span>
           </a>
