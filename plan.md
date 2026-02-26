@@ -91,7 +91,7 @@ a { color: #2E5F8F; transition: color 0.2s ease-out; }
 a:hover { color: #DA7756; }
 ```
 
-**完成标志**：[ ]  
+**完成标志**：[x]  
 **完成后操作**：`git add stylesheet.css && git commit -m "feat: add stylesheet with Claude-inspired design"`
 
 **完成汇报模板**：
