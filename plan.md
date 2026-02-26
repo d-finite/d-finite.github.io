@@ -209,7 +209,7 @@ a:hover { color: #DA7756; }
 - 调整移动端字体大小和间距
 - 测试不同屏幕尺寸显示效果
 
-**完成标志**：[ ]  
+**完成标志**：[x]  
 **完成后操作**：`git add stylesheet.css && git commit -m "feat: add responsive design for mobile"`
 
 **完成汇报模板**：
