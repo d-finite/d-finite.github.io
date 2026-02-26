@@ -150,7 +150,7 @@ a:hover { color: #DA7756; }
 
 **布局参考**：jonbarron index.html 第 19-42 行的结构
 
-**完成标志**：[ ]  
+**完成标志**：[x]  
 **完成后操作**：`git add index.html && git commit -m "feat: add personal info section"`
 
 **完成汇报模板**：
