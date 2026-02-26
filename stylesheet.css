@@ -130,3 +130,87 @@ td {
   -moz-transition: opacity 0.2s ease-in-out;
   -webkit-transition: opacity 0.2s ease-in-out;
 }
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  table {
+    display: block;
+  }
+
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  /* Personal info section - stack avatar and text vertically */
+  table tr td {
+    padding: 16px !important;
+  }
+
+  .name {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* Avatar */
+  .avatar {
+    max-width: 200px;
+    margin: 0 auto 20px;
+  }
+
+  /* Research section headings */
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 10px;
+  }
+
+  /* Paper/Project items - stack image and content vertically */
+  .one {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto 16px;
+  }
+
+  .two {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    position: absolute;
+  }
+
+  .one img,
+  .two img {
+    width: 100%;
+    height: auto;
+  }
+
+  .papertitle {
+    font-size: 15px;
+  }
+
+  /* Center text content on mobile */
+  table tr td p {
+    text-align: left;
+  }
+
+  /* Adjust spacing for paper links */
+  .paper-links a {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+
+  /* Make table widths consistent */
+  table[style*="max-width:800px"] {
+    max-width: 100% !important;
+    padding: 0 12px;
+  }
+}
