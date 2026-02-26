@@ -1,11 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-  --text-color: #191919;
-  --bg-color: #f5f5f5;
-  --link-color: #2e5f8f;
-  --accent-color: #da7756;
-  --border-color: #e0e0e0;
+  /* Text colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+  
+  /* Background colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  
+  /* Accent colors - Blue theme */
+  --highlight-blue: #f0f7ff;
+  --accent-blue: #2563eb;
+  --accent-blue-dark: #1e40af;
+  --accent-orange: #fb923c;
+  
+  /* Link colors */
+  --link-color: #2563eb;
+  --link-hover: #1d4ed8;
 }
 
 * {
@@ -18,13 +31,13 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: Inter, -apple-system, sans-serif;
+  padding: 24px 0 0 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
-  line-height: 1.65;
+  line-height: 1.4;
   letter-spacing: 0.01em;
-  color: var(--text-color);
-  background: var(--bg-color);
+  color: var(--text-primary);
+  background: var(--bg-primary);
 }
 
 a {
@@ -34,18 +47,25 @@ a {
 }
 
 a:hover {
-  color: var(--accent-color);
+  color: var(--accent-orange);
 }
 
 h2 {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 24px 0 12px;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 20px 0 12px;
   letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-align: left;
 }
 
 p {
-  margin: 0 0 12px;
+  margin: 0 0 0;
+}
+
+.paper-row p {
+  margin-top: 12px;
+  margin-bottom: 0;
 }
 
 table {
@@ -59,27 +79,40 @@ td {
 
 .name {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 0.02em;
   margin: 0 0 12px 0;
   padding-top: 0;
+  line-height: 1.2;
 }
 
 .papertitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--link-color);
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 4px;
+}
+
+papertitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--link-color);
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .highlight {
-  background: rgba(218, 119, 86, 0.12);
-  border-bottom: 1px solid var(--accent-color);
+  background: rgba(255, 253, 224, 0.5);
+  border-bottom: 2px solid #fba524;
   padding: 0 2px;
 }
 
 .section-divider {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid #e5e5e5;
   margin: 24px 0;
 }
 
@@ -97,17 +130,25 @@ td {
 }
 
 .paper-row {
-  transition: transform 0.25s ease-in-out;
+  padding: 20px;
+  margin-bottom: 8px;
+  border-radius: 0;
+  transition: background-color 0.2s ease-out;
 }
 
 .paper-row:hover {
-  transform: translateY(-2px);
+  background-color: #e0f2fe;
+}
+
+.paper-row.highlight-paper,
+.paper-row[bgcolor="#ffffd0"] {
+  background-color: var(--highlight-blue);
 }
 
 .paper-thumb {
   width: 100%;
   max-width: 160px;
-  border: 1px solid var(--border-color);
+  border: 1px solid #e5e5e5;
   border-radius: 8px;
   transition: opacity 0.25s ease-in-out;
 }
@@ -117,18 +158,114 @@ td {
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  width: 235px;
+  height: 235px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.one img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .two {
-  width: 160px;
-  height: 160px;
+  width: 235px;
+  height: 235px;
   position: absolute;
-  transition: opacity 0.2s ease-in-out;
-  -moz-transition: opacity 0.2s ease-in-out;
-  -webkit-transition: opacity 0.2s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.two.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.two img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Author styling */
+.authors {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.author-self {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.contribution-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 4px 0;
+}
+
+/* Conference/Journal name */
+em {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Special awards/honors */
+.award-tag {
+  display: inline;
+  margin-left: 4px;
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+/* Paper description */
+.paper-description {
+  margin-top: 8px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+/* Author links in paper row - display as black text */
+.paper-row a {
+  color: var(--text-primary);
+}
+
+.paper-row a:hover {
+  color: var(--accent-orange);
+}
+
+/* Override: paper title link should be blue */
+.paper-row > td:nth-child(2) > a {
+  color: var(--link-color);
+}
+
+.paper-row > td:nth-child(2) > a:hover {
+  color: var(--accent-orange);
+}
+
+/* Paper links (Paper/Project/Code/Bibtex) - blue, not bold */
+.paper-links-group a {
+  color: var(--link-color);
+  font-weight: 400;
+}
+
+.paper-links-group a:hover {
+  color: var(--accent-orange);
 }
 
 /* Responsive Design for Mobile */

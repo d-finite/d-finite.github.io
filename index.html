@@ -3,33 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Your Name" />
-    <title>Your Name | Research</title>
+    <meta name="author" content="Mingleyang Li ｜ 李铭乐洋" />
+    <title>Mingleyang Li | 李铭乐洋</title>
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:800px;">
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
       <!-- Header Section with Name and Avatar -->
       <tr style="padding:0px">
         <td style="padding:2.5%;width:63%;vertical-align:middle">
-          <p class="name">Your Name</p>
+          <p class="name">Mingleyang Li | 李铭乐洋</p>
           <p>
-            Welcome to my academic homepage. I am a researcher interested in
-            computer vision, machine learning, and computational photography.
+            I am a first-year undergraduate student at <a href="https://english.pku.edu.cn/">Peking University</a>, majoring in Computer Science and Technology in the <a href="https://cfcs.pku.edu.cn/english/research/turing_program/introduction1/index.htm">Turing Class</a>.
           </p>
-          <p>
-            I am currently affiliated with [Your Affiliation / University].
-          </p>
+          <br>
           <p style="text-align:center">
-            <a href="mailto:your.email@example.com">Email</a> &nbsp;/&nbsp;
-            <a href="#">CV</a> &nbsp;/&nbsp;
+            <a href="mailto:mlyli25@stu.pku.edu.cn">Email</a> &nbsp;/&nbsp;
             <a href="https://scholar.google.com">Scholar</a> &nbsp;/&nbsp;
-            <a href="https://github.com/your-username">GitHub</a>
+            <a href="https://github.com/d-finite">GitHub</a>
           </p>
         </td>
         <td style="padding:2.5%;width:37%;max-width:37%">
           <img
-            src="images/avatar.jpg"
+            src="images/avatar.png"
             alt="Profile Picture"
             class="avatar"
             style="width:100%;max-width:100%;border-radius:50%;"
@@ -38,129 +34,59 @@
       </tr>
     </table>
 
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:800px;">
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
       <!-- Research Section -->
       <tr>
         <td style="padding:16px;width:100%;vertical-align:middle">
           <h2>Research</h2>
           <p>
-            I study problems in computer vision and machine learning. Below are some of my recent projects and papers.
+            My research, under the supervision of <a href="https://zsdonghao.github.io/">Prof. Hao Dong</a>, focuses on embodied intelligence and deformable object manipulation.
           </p>
         </td>
       </tr>
     </table>
 
-    <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:800px;">
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:845px;">
       <!-- Paper 1 -->
-      <tr onmouseout="paper1_stop()" onmouseover="paper1_start()" bgcolor="#ffffd0">
-        <td style="padding:16px;width:20%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id="paper1_image">
-              <img src="images/paper1_alt.jpg" width="100%" />
+      <tr class="paper-row highlight-paper" onmouseout="paper1_stop()" onmouseover="paper1_start()">
+        <td style="padding:5px;width:30%;vertical-align:middle;">
+          <div class="one" id="paper1_one">
+            <img src="images/works/garmentpile2/teaser.png" alt="Paper teaser" />
+            <div class="two" id="paper1_two">
+              <img src="images/works/garmentpile2/pipeline.png" alt="Paper pipeline" />
             </div>
-            <img src="images/paper1.jpg" width="100%" />
           </div>
           <script type="text/javascript">
             function paper1_start() {
-              document.getElementById("paper1_image").style.opacity = "1";
+              document.getElementById("paper1_two").classList.add("show");
             }
             function paper1_stop() {
-              document.getElementById("paper1_image").style.opacity = "0";
+              document.getElementById("paper1_two").classList.remove("show");
             }
             paper1_stop();
           </script>
         </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
+        <td style="padding:15px;width:70%;vertical-align:middle;">
           <a href="#">
-            <span class="papertitle">Sample Research Paper Title 1</span>
+            <papertitle>GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning</papertitle>
           </a>
-          <br />
-          <a href="#">Author One</a>,
-          <a href="#">Author Two</a>,
-          <strong>Your Name</strong>
-          <br />
-          <em>Conference 2026</em>
-          <br />
-          <a href="#">project page</a> / <a href="#">paper</a>
-          <p></p>
+          <strong>Mingleyang Li*,</strong>
+          <a href="https://github.com/wayrise">Yuran Wang*</a>,
+          <a href="https://yuechen0614.github.io/">Yue Chen</a>,
+          <a href="https://tianxingchen.github.io/">Tianxing Chen</a>,
+          <a href="https://github.com/SCreatorX">Jiaqi Liang</a>,
+          <a href="https://github.com/hwqa">Zishun Shen</a>,
+          <a href="https://luhr2003.github.io/">Haoran Lu</a>,
+          <a href="https://warshallrho.github.io/">Ruihai Wu</a>,
+          <a href="https://zsdonghao.github.io/">Hao Dong</a>
+          <br>
+          <small>(*equal contribution)</small>
+          <br>
+          <span class="paper-links-group"><a href="#">Paper</a> / <a href="https://garmentpile2.github.io/">Project</a> / <a href="https://github.com/d-finite/GarmentPile2">Code</a> / <a href="#">Bibtex</a></span>
+          <br>
+          <em>ICRA 2026</em>
           <p>
-            This is a placeholder description for your research project. Describe the key contributions and methodology here.
-          </p>
-        </td>
-      </tr>
-
-      <!-- Paper 2 -->
-      <tr onmouseout="paper2_stop()" onmouseover="paper2_start()">
-        <td style="padding:16px;width:20%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id="paper2_image">
-              <img src="images/paper2_alt.jpg" width="100%" />
-            </div>
-            <img src="images/paper2.jpg" width="100%" />
-          </div>
-          <script type="text/javascript">
-            function paper2_start() {
-              document.getElementById("paper2_image").style.opacity = "1";
-            }
-            function paper2_stop() {
-              document.getElementById("paper2_image").style.opacity = "0";
-            }
-            paper2_stop();
-          </script>
-        </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
-          <a href="#">
-            <span class="papertitle">Sample Research Paper Title 2</span>
-          </a>
-          <br />
-          <a href="#">Author Three</a>,
-          <a href="#">Author Four</a>,
-          <strong>Your Name</strong>
-          <br />
-          <em>Journal 2025</em>
-          <br />
-          <a href="#">project page</a> / <a href="#">paper</a>
-          <p></p>
-          <p>
-            Another placeholder description for your research. Highlight the innovation and impact of your work.
-          </p>
-        </td>
-      </tr>
-
-      <!-- Paper 3 -->
-      <tr onmouseout="paper3_stop()" onmouseover="paper3_start()" bgcolor="#ffffd0">
-        <td style="padding:16px;width:20%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id="paper3_image">
-              <img src="images/paper3_alt.jpg" width="100%" />
-            </div>
-            <img src="images/paper3.jpg" width="100%" />
-          </div>
-          <script type="text/javascript">
-            function paper3_start() {
-              document.getElementById("paper3_image").style.opacity = "1";
-            }
-            function paper3_stop() {
-              document.getElementById("paper3_image").style.opacity = "0";
-            }
-            paper3_stop();
-          </script>
-        </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
-          <a href="#">
-            <span class="papertitle">Sample Research Paper Title 3</span>
-          </a>
-          <br />
-          <a href="#">Author Five</a>,
-          <a href="#">Author Six</a>,
-          <strong>Your Name</strong>
-          <br />
-          <em>Workshop 2025</em>
-          <br />
-          <a href="#">project page</a> / <a href="#">arxiv</a>
-          <p></p>
-          <p>
-            Replace this placeholder text with a brief abstract or description of your research contribution.
+            GarmentPile++ is a novel garment retrieval pipeline that can not only follow language instruction to execute safe and clean retrieval but also guarantee exactly one garment is retrieved per attempt.
           </p>
         </td>
       </tr>
