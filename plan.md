@@ -120,7 +120,7 @@ a:hover { color: #DA7756; }
 - 创建 jonbarron 风格的表格布局结构
 - 添加占位符内容
 
-**完成标志**：[ ]  
+**完成标志**：[x]  
 **完成后操作**：`git add index.html && git commit -m "feat: create HTML structure with table layout"`
 
 **完成汇报模板**：
