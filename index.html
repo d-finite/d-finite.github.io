@@ -64,6 +64,82 @@
 
     <!-- Paper List -->
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:845px;">
+      <!-- Paper 2 -->
+      <tr class="paper-row highlight-paper" onmouseout="paper2_stop()" onmouseover="paper2_start()">
+        <td style="padding:5px;width:30%;vertical-align:middle;">
+          <div class="one" id="paper2_one">
+            <img src="images/works/rmbench/teaser.png" alt="Paper teaser" />
+            <div class="two" id="paper2_two">
+              <img src="images/works/rmbench/policy.png" alt="Paper policy" />
+            </div>
+          </div>
+          <script type="text/javascript">
+            const PAPER_SWAP_FADE_MS = 50;
+
+            function swapPaperImage(oneId, twoId, showTwo) {
+              const one = document.getElementById(oneId);
+              const two = document.getElementById(twoId);
+              if (!one || !two) return;
+
+              if (one._swapTimer) {
+                clearTimeout(one._swapTimer);
+              }
+
+              one.classList.add("swapping");
+              one._swapTimer = setTimeout(function () {
+                if (showTwo) {
+                  one.classList.remove("show");
+                  two.classList.add("show");
+                } else {
+                  one.classList.add("show");
+                  two.classList.remove("show");
+                }
+                one.classList.remove("swapping");
+                one._swapTimer = null;
+              }, PAPER_SWAP_FADE_MS);
+            }
+
+            function paper2_start() {
+              swapPaperImage("paper2_one", "paper2_two", true);
+            }
+            function paper2_stop() {
+              swapPaperImage("paper2_one", "paper2_two", false);
+            }
+            paper2_stop();
+          </script>
+        </td>
+        <td style="padding:15px;width:70%;vertical-align:middle;">
+          <a href="https://arxiv.org/abs/2603.01229">
+            <papertitle>RMBench: Memory-Dependent Robotic Manipulation Benchmark with Insights into Policy Design</papertitle>
+          </a>
+          <a href="https://tianxingchen.github.io/">Tianxing Chen*</a>,
+          <a href="https://scholar.google.com/citations?user=4DJfGOMAAAAJ">Yuran Wang*</a>,
+          <strong>Mingleyang Li*,</strong>
+          <a href="https://yanqin2002.github.io/">Yan Qin*</a>,
+          <a href="https://scholar.google.com/citations?user=tSK_CIAAAAAJ">Hao Shi</a>,
+          Zixuan Li,
+          Yifan Hu,
+          Yingsheng Zhang,
+          Kaixuan Wang,
+          <a href="https://yuechen0614.github.io/">Yue Chen</a>,
+          <a href="https://whcpumpkin.github.io/">Hongcheng Wang</a>,
+          <a href="https://scholar.google.com/citations?user=Mu__bJEAAAAJ">Renjing Xu</a>,
+          <a href="https://warshallrho.github.io/">Ruihai Wu</a>,
+          <a href="https://yaomarkmu.github.io/">Yao Mu</a>,
+          <a href="https://www.yangyaodong.com/">Yaodong Yang</a>,
+          <a href="https://zsdonghao.github.io/">Hao Dong</a>,
+          <a href="http://luoping.me/">Ping Luo</a>
+          <br>
+          <small>(*equal contribution)</small>
+          <br>
+          <span class="paper-links-group"><a href="https://arxiv.org/abs/2603.01229">Paper</a> / <a href="https://rmbench.github.io/">Project</a> / <a href="https://github.com/robotwin-Platform/rmbench">Code</a> / <a href="#">Bibtex</a></span>
+          <br>
+          Under Review
+          <p>
+            RMBench is a simulation benchmark comprising 9 manipulation tasks that span multiple levels of memory complexity, enabling systematic evaluation of policy memory capabilities in robotic manipulation.
+          </p>
+        </td>
+      </tr>
       <!-- Paper 1 -->
       <tr class="paper-row highlight-paper" onmouseout="paper1_stop()" onmouseover="paper1_start()">
         <td style="padding:5px;width:30%;vertical-align:middle;">
@@ -75,10 +151,10 @@
           </div>
           <script type="text/javascript">
             function paper1_start() {
-              document.getElementById("paper1_two").classList.add("show");
+              swapPaperImage("paper1_one", "paper1_two", true);
             }
             function paper1_stop() {
-              document.getElementById("paper1_two").classList.remove("show");
+              swapPaperImage("paper1_one", "paper1_two", false);
             }
             paper1_stop();
           </script>
@@ -88,7 +164,7 @@
             <papertitle>GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning</papertitle>
           </a>
           <strong>Mingleyang Li*,</strong>
-          <a href="https://github.com/wayrise">Yuran Wang*</a>,
+          <a href="https://scholar.google.com/citations?user=4DJfGOMAAAAJ">Yuran Wang*</a>,
           <a href="https://yuechen0614.github.io/">Yue Chen</a>,
           <a href="https://tianxingchen.github.io/">Tianxing Chen</a>,
           <a href="https://github.com/SCreatorX">Jiaqi Liang</a>,
