@@ -26,7 +26,7 @@
         </td>
         <td style="padding:2.5%;width:37%;max-width:37%">
           <img
-            src="images/avatar.png"
+            src="images/avatar.jpg"
             alt="Profile Picture"
             class="avatar"
             style="width:100%;max-width:100%;border-radius:50%;"
@@ -45,6 +45,7 @@
       <tr>
         <td style="padding:0px 16px 16px 36px;width:100%;vertical-align:middle">
           <p>
+            <li>[2026/06] 🎉 Honored to receive the <strong>SenseTime Scholarship</strong> 2026 &mdash; youngest recipient nationwide, 30 awardees per year in China.</li>
             <li>[2026/01] 🎉 One paper gets accepted to ICRA 2026. </li>
           </p>
         </td>
@@ -57,7 +58,7 @@
         <td style="padding:16px;width:100%;vertical-align:middle">
           <h2>Research</h2>
           <p>
-            My research focuses on embodied intelligence and deformable object manipulation. <br>
+            My research focuses on embodied intelligence and deformable object manipulation. My recent research interests center on world action models. <br>
             Representative works are <strong>highlighted</strong>.
           </p>
         </td>
@@ -65,6 +66,34 @@
     </table>
 
     <!-- Paper List -->
+    <script type="text/javascript">
+      // Shared hover image-swap helper, defined once before the paper rows so it
+      // works regardless of the order the rows appear in.
+      const PAPER_SWAP_FADE_MS = 50;
+
+      function swapPaperImage(oneId, twoId, showTwo) {
+        const one = document.getElementById(oneId);
+        const two = document.getElementById(twoId);
+        if (!one || !two) return;
+
+        if (one._swapTimer) {
+          clearTimeout(one._swapTimer);
+        }
+
+        one.classList.add("swapping");
+        one._swapTimer = setTimeout(function () {
+          if (showTwo) {
+            one.classList.remove("show");
+            two.classList.add("show");
+          } else {
+            one.classList.add("show");
+            two.classList.remove("show");
+          }
+          one.classList.remove("swapping");
+          one._swapTimer = null;
+        }, PAPER_SWAP_FADE_MS);
+      }
+    </script>
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:845px;">
       <!-- Paper 2 -->
       <tr class="paper-row highlight-paper" onmouseout="paper2_stop()" onmouseover="paper2_start()">
@@ -76,31 +105,6 @@
             </div>
           </div>
           <script type="text/javascript">
-            const PAPER_SWAP_FADE_MS = 50;
-
-            function swapPaperImage(oneId, twoId, showTwo) {
-              const one = document.getElementById(oneId);
-              const two = document.getElementById(twoId);
-              if (!one || !two) return;
-
-              if (one._swapTimer) {
-                clearTimeout(one._swapTimer);
-              }
-
-              one.classList.add("swapping");
-              one._swapTimer = setTimeout(function () {
-                if (showTwo) {
-                  one.classList.remove("show");
-                  two.classList.add("show");
-                } else {
-                  one.classList.add("show");
-                  two.classList.remove("show");
-                }
-                one.classList.remove("swapping");
-                one._swapTimer = null;
-              }, PAPER_SWAP_FADE_MS);
-            }
-
             function paper2_start() {
               swapPaperImage("paper2_one", "paper2_two", true);
             }
@@ -142,7 +146,49 @@
           </p>
         </td>
       </tr>
-      <!-- Paper 1 -->
+      <!-- Paper 3: HeteroGenManip (co-author, not highlighted) -->
+      <tr class="paper-row" onmouseout="paper3_stop()" onmouseover="paper3_start()">
+        <td style="padding:5px;width:30%;vertical-align:middle;">
+          <div class="one" id="paper3_one">
+            <img src="images/works/heterogenmanip/overview.png" alt="Paper overview" />
+            <div class="two" id="paper3_two">
+              <img src="images/works/heterogenmanip/architecture.png" alt="Paper architecture" />
+            </div>
+          </div>
+          <script type="text/javascript">
+            function paper3_start() {
+              swapPaperImage("paper3_one", "paper3_two", true);
+            }
+            function paper3_stop() {
+              swapPaperImage("paper3_one", "paper3_two", false);
+            }
+            paper3_stop();
+          </script>
+        </td>
+        <td style="padding:15px;width:70%;vertical-align:middle;">
+          <a href="https://arxiv.org/abs/2605.10201">
+            <papertitle>HeteroGenManip: Generalizable Manipulation for Heterogeneous Object Interactions</papertitle>
+          </a>
+          <a href="https://github.com/stubborn111">Zhenhao Shen*</a>,
+          Zeming Yang*,
+          <a href="https://yuechen0614.github.io/">Yue Chen</a>,
+          <a href="https://scholar.google.com/citations?user=4DJfGOMAAAAJ">Yuran Wang</a>,
+          Shengqiang Xu,
+          <strong>Mingleyang Li,</strong>
+          <a href="https://zsdonghao.github.io/">Hao Dong</a>,
+          <a href="https://warshallrho.github.io/">Ruihai Wu&dagger;</a>
+          <br>
+          <small>(*equal contribution, &dagger;corresponding author)</small>
+          <br>
+          <span class="paper-links-group"><a href="https://arxiv.org/abs/2605.10201">Paper</a> / <a href="https://yzmyalier.github.io/HeteroGenManip/">Project</a> / <a href="https://github.com/YzmYalier/HeteroGenManip">Code</a></span>
+          <br>
+          Under Review
+          <p>
+            HeteroGenManip is a task-conditioned two-stage manipulation framework that decouples grasping from interaction, routing each object to a category-specialized foundation model via a Multi-Foundation-Model Diffusion Policy to generalize across heterogeneous object interactions.
+          </p>
+        </td>
+      </tr>
+      <!-- Paper 1: GarmentPile++ -->
       <tr class="paper-row highlight-paper" onmouseout="paper1_stop()" onmouseover="paper1_start()">
         <td style="padding:5px;width:30%;vertical-align:middle;">
           <div class="one" id="paper1_one">
@@ -221,6 +267,7 @@
       <tr>
         <td style="padding:0px 16px 16px 36px;width:100%;vertical-align:middle">
           <p>
+            <li>[2026/06]: <strong>SenseTime Scholarship</strong> (<strong>Youngest</strong> recipient, <strong>30</strong>/year in China)</li>
             <li>[2024/02]: China Team Selection (CTS/CTSC) (Ranking 7/30)</li>
             <li>[2023/08]: National Olympiad in Informatics (NOI) 2023, Gold Medal, National Training Team (Ranking 33/50)</li>
             <li>[2022/08]: National Olympiad in Informatics (NOI) 2022, Summer Camp Participant (Junior high school participants not counted as official), Reached National Training Team Cut-off Score (Ranking 2/2)</li>
@@ -234,7 +281,7 @@
     <table style="width:100%;border:0px;margin-right:auto;margin-left:auto;max-width:800px;">
       <tr>
         <td style="text-align:center">
-          <a href="https://clustrmaps.com/site/1c741" title="ClustrMaps"><script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=ZwEQ9BXXqDc-orc7TkijcIPT2g1wtoufemehrfGpHt8&cl=ffffff&w=a"></script></a>
+          <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=tt&d=ZwEQ9BXXqDc-orc7TkijcIPT2g1wtoufemehrfGpHt8&co=ffffff&cmo=33a508&cmn=ff6628&ct=000000"></script>
         </td>
       </tr>
     </table>
@@ -249,7 +296,7 @@
         <td><p style="text-align:center">
           This homepage is designed based on <a href="https://jonbarron.info/">Jon Barron</a>'s website and deployed on <a href="https://pages.github.com/">Github Pages</a>.
           <br>
-          Last updated: Feb. 26, 2026
+          Last updated: Jun. 22, 2026
           <br>
           © 2026 Mingleyang Li
         </p>

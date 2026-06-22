@@ -136,7 +136,7 @@ papertitle {
   transition: background-color 0.2s ease-out;
 }
 
-.paper-row:hover {
+.paper-row.highlight-paper:hover {
   background-color: #e0f2fe;
 }
 
