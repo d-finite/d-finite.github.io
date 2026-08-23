@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
+    <aside class="section-nav" aria-label="Page sections">
+      <div class="section-nav__inner">
+        <span class="section-nav__label">Index</span>
+        <div class="section-nav__track">
+          <span class="section-nav__indicator" aria-hidden="true"></span>
+          <ol class="section-nav__list" id="section-nav-list"></ol>
+        </div>
+      </div>
+    </aside>
+
+    <table id="about" class="page-section" data-nav-section data-nav-label="About" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
       <!-- Header Section with Name and Avatar -->
       <tr style="padding:0px">
         <td style="padding:2.5%;width:63%;vertical-align:middle">
@@ -39,10 +49,10 @@
     </table>
     
     <!-- News -->
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
+    <table id="news" class="page-section" data-nav-section style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
       <tr>
         <td style="padding:16px 16px 8px 16px;width:100%;vertical-align:middle">
-          <h2 style="margin-bottom:8px;">News</h2>
+          <h2 class="section-title" style="margin-bottom:8px;">News</h2>
         </td>
       </tr>
       <tr>
@@ -55,10 +65,10 @@
     </table>
 
     <!-- Research Section -->
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
+    <table id="research" class="page-section" data-nav-section style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
       <tr>
         <td style="padding:16px;width:100%;vertical-align:middle">
-          <h2>Research</h2>
+          <h2 class="section-title">Research</h2>
           <p>
             My research focuses on embodied intelligence and deformable object manipulation. My recent research interests center on world action models. <br>
             Representative works are <strong>highlighted</strong>.
@@ -276,10 +286,10 @@
     </table>
 
     <!-- Experience -->
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
+    <table id="experience" class="page-section" data-nav-section style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
       <tr>
         <td style="padding:16px;width:100%;vertical-align:middle">
-          <h2>Experience</h2>
+          <h2 class="section-title">Experience</h2>
         </td>
       </tr>
     </table>
@@ -300,10 +310,10 @@
     </table>
 
     <!-- Selected Awards and Honors -->
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
+    <table id="awards" class="page-section" data-nav-section style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
       <tr>
         <td style="padding:16px 16px 8px 16px;width:100%;vertical-align:middle">
-          <h2 style="margin-bottom:8px;">Selected Awards and Honors</h2>
+          <h2 class="section-title" style="margin-bottom:8px;">Selected Awards and Honors</h2>
         </td>
       </tr>
       <tr>
@@ -344,5 +354,6 @@
         </p>
       </tr>
     </table>
+    <script src="navigation.js"></script>
   </body>
 </html>
