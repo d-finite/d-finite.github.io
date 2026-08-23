@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Outfit:wght@300;400;500;600;700&display=swap");
 
 :root {
   /* Text colors */
@@ -32,7 +32,7 @@ html {
 body {
   margin: 0;
   padding: 24px 0 0 0;
-  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+  font-family: "Outfit", "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.01em;
@@ -83,6 +83,7 @@ td {
   justify-content: center;
   flex-wrap: nowrap;
   gap: 8px;
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
   font-size: 28px;
   font-weight: 400;
   text-align: center;
