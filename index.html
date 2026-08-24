@@ -5,9 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Mingleyang Li ｜ 李铭乐洋" />
     <title>Mingleyang Li | 李铭乐洋</title>
-    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="stylesheet.css?v=20260824-15" />
   </head>
   <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-email" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+        <path d="m3 7 9 6 9-6"></path>
+      </symbol>
+      <symbol id="icon-scholar" viewBox="0 0 24 24">
+        <path d="m2 10 10-5 10 5-10 5Z"></path>
+        <path d="M6 12.5V17c3 2 9 2 12 0v-4.5"></path>
+        <path d="M22 10v6"></path>
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-7 0C4.8.1 3.7.5 3.7.5A5 5 0 0 0 3.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.4 3.5 6.6 6.8 7A4.8 4.8 0 0 0 8 18v4"></path>
+        <path d="M8 19c-3 .9-3-1.5-4-2"></path>
+      </symbol>
+      <symbol id="icon-paper" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+        <path d="M14 2v6h6M8 13h8M8 17h8"></path>
+      </symbol>
+      <symbol id="icon-project" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+        <path d="M3 9h18M9 21V9"></path>
+      </symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14"></path>
+      </symbol>
+    </svg>
+
     <aside class="section-nav" aria-label="Page sections">
       <div class="section-nav__inner">
         <span class="section-nav__label">Index</span>
@@ -29,14 +56,14 @@
           </p>
           <p>
             I am a second-year undergraduate student at <a href="https://english.pku.edu.cn/">Peking University</a>, majoring in Computer Science and Technology in the <a href="https://cfcs.pku.edu.cn/english/research/turing_program/introduction1/index.htm">Turing Class</a>.
-            My research lies at the intersection of embodied intelligence and robot learning. I am interested in building agents that can perceive physical interactions, retain task-relevant experience, and predict how their actions reshape the world.
-            I am fortunate to be advised by Prof. <a href="https://zsdonghao.github.io/">Hao Dong</a>, and mentored by <a href="https://scholar.google.com/citations?user=4DJfGOMAAAAJ">Yuran Wang</a> and <a href="https://warshallrho.github.io/">Ruihai Wu</a>.
+            My current research centers on world action models, with the goal of learning predictive representations that connect visual observations, robot actions, and future physical dynamics.
+            I was fortunate to be introduced to research in this field by Prof. <a href="https://zsdonghao.github.io/">Hao Dong</a>, and I am very lucky to be mentored by <a href="https://wayrise.github.io//">Yuran Wang</a>. Together, we have worked on quite a few interesting projects :&gt;
           </p>
           <br>
-          <p style="text-align:center">
-            <a href="mailto:mlyli25@stu.pku.edu.cn">Email</a> &nbsp;/&nbsp;
-            <a href="https://scholar.google.com/citations?hl=zh-CN&user=90LnHc8AAAAJ">Scholar</a> &nbsp;/&nbsp;
-            <a href="https://github.com/d-finite">GitHub</a>
+          <p class="profile-links">
+            <a class="link-with-icon" href="mailto:mlyli25@stu.pku.edu.cn"><svg class="link-icon" aria-hidden="true"><use href="#icon-email"></use></svg>Email</a> &nbsp;/&nbsp;
+            <a class="link-with-icon" href="https://scholar.google.com/citations?hl=zh-CN&user=90LnHc8AAAAJ"><svg class="link-icon" aria-hidden="true"><use href="#icon-scholar"></use></svg>Scholar</a> &nbsp;/&nbsp;
+            <a class="link-with-icon" href="https://github.com/d-finite"><svg class="link-icon" aria-hidden="true"><use href="#icon-github"></use></svg>GitHub</a>
           </p>
         </td>
         <td class="avatar-cell" style="padding:2.5%;width:37%;max-width:37%">
@@ -48,6 +75,16 @@
         </td>
       </tr>
     </table>
+
+    <blockquote class="lyric-quote" lang="zh-HK" aria-label="Lyric excerpt from Eason Chan's 沙龍">
+      <p>
+        <span class="lyric-line">登高峯一秒 得獎一秒</span>
+        <span class="lyric-line">再破紀錄的一秒</span>
+        <span class="lyric-line">港灣晚燈 山頂破曉</span>
+        <span class="lyric-line">摘下懷念 記住美妙</span>
+      </p>
+      <cite>— Eason Chan，《沙龍》</cite>
+    </blockquote>
     
     <!-- News -->
     <table id="news" class="page-section" data-nav-section style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:875px;">
@@ -72,8 +109,11 @@
         <td style="padding:16px;width:100%;vertical-align:middle">
           <h2 class="section-title">Research</h2>
           <p>
-            My research explores how embodied agents can understand, remember, and predict the physical world through interaction. I am especially interested in world action models, memory-aware robot policies, and generalizable manipulation, spanning model design, benchmark construction, and deployment in simulation and the real world.<br>
-            Representative works are <strong>highlighted</strong>.
+            My research currently centers on World Action Models (WAMs): predictive models that learn how the physical world evolves under robot actions. I am particularly interested in action-conditioned representations, model architectures, scalable training, and systematic evaluation, with the broader goal of building robot agents that can anticipate the consequences of their actions and interact more effectively with the real world.
+            <span class="representative-line">
+              Representative works are <strong>highlighted</strong>.<br>
+              <small class="paper-meta-note">(*equal contribution, &dagger;corresponding author)</small>
+            </span>
           </p>
         </td>
       </tr>
@@ -112,12 +152,14 @@
       <!-- Paper 4: XPolicyLab (co-author, not highlighted) -->
       <tr class="paper-row" onmouseout="paper4_stop()" onmouseover="paper4_start()">
         <td style="padding:5px;width:30%;vertical-align:middle;">
-          <div class="one" id="paper4_one">
-            <img src="images/works/xpolicylab/teaser.png" alt="XPolicyLab overview" />
-            <div class="two" id="paper4_two">
-              <img src="images/works/xpolicylab/method.png" alt="XPolicyLab infrastructure" />
+          <a class="paper-project-visual" href="https://xpolicylab.github.io/" aria-label="Open the XPolicyLab project page">
+            <div class="one" id="paper4_one">
+              <img src="images/works/xpolicylab/teaser.png" alt="XPolicyLab overview" />
+              <div class="two" id="paper4_two">
+                <img src="images/works/xpolicylab/method.png" alt="XPolicyLab infrastructure" />
+              </div>
             </div>
-          </div>
+          </a>
           <script type="text/javascript">
             function paper4_start() {
               swapPaperImage("paper4_one", "paper4_two", true);
@@ -129,19 +171,17 @@
           </script>
         </td>
         <td style="padding:15px;width:70%;vertical-align:middle;">
-          <a href="https://arxiv.org/abs/2608.09892">
+          <a class="paper-project-title" href="https://xpolicylab.github.io/">
             <papertitle>XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment</papertitle>
           </a>
-          <a href="https://xpolicylab.github.io/">XPolicyLab Community</a>,
           <a href="https://tianxingchen.github.io/">Tianxing Chen*</a>,
           <a href="https://yuechen0614.github.io/">Yue Chen*</a>,
+          <br>
           &hellip;,
-          <strong>Mingleyang Li,</strong>
+          <strong class="author-self">Mingleyang Li,</strong>
           &hellip;
           <br>
-          <small>(*equal contribution; abbreviated author list)</small>
-          <br>
-          <span class="paper-links-group"><a href="https://arxiv.org/abs/2608.09892">Paper</a> / <a href="https://xpolicylab.github.io/">Project</a> / <a href="https://github.com/XPolicyLab/XPolicyLab">Code</a></span>
+          <span class="paper-links-group"><a class="link-with-icon" href="https://arxiv.org/abs/2608.09892"><svg class="link-icon" aria-hidden="true"><use href="#icon-paper"></use></svg>Paper</a> / <a class="link-with-icon" href="https://xpolicylab.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project</a> / <a class="link-with-icon" href="https://github.com/XPolicyLab/XPolicyLab"><svg class="link-icon" aria-hidden="true"><use href="#icon-code"></use></svg>Code</a></span>
           <br>
           Under Review
           <details class="paper-details">
@@ -155,12 +195,14 @@
       <!-- Paper 2 -->
       <tr class="paper-row highlight-paper" onmouseout="paper2_stop()" onmouseover="paper2_start()">
         <td style="padding:5px;width:30%;vertical-align:middle;">
-          <div class="one" id="paper2_one">
-            <img src="images/works/rmbench/teaser.png" alt="Paper teaser" />
-            <div class="two" id="paper2_two">
-              <img src="images/works/rmbench/policy.png" alt="Paper policy" />
+          <a class="paper-project-visual" href="https://rmbench.github.io/" aria-label="Open the RMBench project page">
+            <div class="one" id="paper2_one">
+              <img src="images/works/rmbench/teaser.png" alt="Paper teaser" />
+              <div class="two" id="paper2_two">
+                <img src="images/works/rmbench/policy.png" alt="Paper policy" />
+              </div>
             </div>
-          </div>
+          </a>
           <script type="text/javascript">
             function paper2_start() {
               swapPaperImage("paper2_one", "paper2_two", true);
@@ -172,13 +214,14 @@
           </script>
         </td>
         <td style="padding:15px;width:70%;vertical-align:middle;">
-          <a href="https://arxiv.org/abs/2603.01229">
+          <a class="paper-project-title" href="https://rmbench.github.io/">
             <papertitle>RMBench: Memory-Dependent Robotic Manipulation Benchmark with Insights into Policy Design</papertitle>
           </a>
           <a href="https://tianxingchen.github.io/">Tianxing Chen*</a>,
-          <a href="https://scholar.google.com/citations?user=4DJfGOMAAAAJ">Yuran Wang*</a>,
-          <strong>Mingleyang Li*,</strong>
+          <a href="https://wayrise.github.io//">Yuran Wang*</a>,
+          <strong class="author-self">Mingleyang Li*,</strong>
           <a href="https://yanqin2002.github.io/">Yan Qin*</a>,
+          <br>
           <a href="https://scholar.google.com/citations?user=tSK_CIAAAAAJ">Hao Shi</a>,
           Zixuan Li,
           Yifan Hu,
@@ -193,9 +236,7 @@
           <a href="https://zsdonghao.github.io/">Hao Dong&dagger;</a>,
           <a href="http://luoping.me/">Ping Luo&dagger;</a>
           <br>
-          <small>(*equal contribution, &dagger;corresponding author)</small>
-          <br>
-          <span class="paper-links-group"><a href="https://arxiv.org/abs/2603.01229">Paper</a> / <a href="https://rmbench.github.io/">Project</a> / <a href="https://github.com/robotwin-Platform/rmbench">Code</a></span>
+          <span class="paper-links-group"><a class="link-with-icon" href="https://arxiv.org/abs/2603.01229"><svg class="link-icon" aria-hidden="true"><use href="#icon-paper"></use></svg>Paper</a> / <a class="link-with-icon" href="https://rmbench.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project</a> / <a class="link-with-icon" href="https://github.com/robotwin-Platform/rmbench"><svg class="link-icon" aria-hidden="true"><use href="#icon-code"></use></svg>Code</a></span>
           <br>
           Under Review
           <details class="paper-details">
@@ -209,12 +250,14 @@
       <!-- Paper 3: HeteroGenManip (co-author, not highlighted) -->
       <tr class="paper-row" onmouseout="paper3_stop()" onmouseover="paper3_start()">
         <td style="padding:5px;width:30%;vertical-align:middle;">
-          <div class="one" id="paper3_one">
-            <img src="images/works/heterogenmanip/overview.png" alt="Paper overview" />
-            <div class="two" id="paper3_two">
-              <img src="images/works/heterogenmanip/architecture.png" alt="Paper architecture" />
+          <a class="paper-project-visual" href="https://yzmyalier.github.io/HeteroGenManip/" aria-label="Open the HeteroGenManip project page">
+            <div class="one" id="paper3_one">
+              <img src="images/works/heterogenmanip/overview.png" alt="Paper overview" />
+              <div class="two" id="paper3_two">
+                <img src="images/works/heterogenmanip/architecture.png" alt="Paper architecture" />
+              </div>
             </div>
-          </div>
+          </a>
           <script type="text/javascript">
             function paper3_start() {
               swapPaperImage("paper3_one", "paper3_two", true);
@@ -226,21 +269,20 @@
           </script>
         </td>
         <td style="padding:15px;width:70%;vertical-align:middle;">
-          <a href="https://arxiv.org/abs/2605.10201">
+          <a class="paper-project-title" href="https://yzmyalier.github.io/HeteroGenManip/">
             <papertitle>HeteroGenManip: Generalizable Manipulation for Heterogeneous Object Interactions</papertitle>
           </a>
           <a href="https://github.com/stubborn111">Zhenhao Shen*</a>,
           Zeming Yang*,
+          <br>
           <a href="https://yuechen0614.github.io/">Yue Chen</a>,
-          <a href="https://scholar.google.com/citations?user=4DJfGOMAAAAJ">Yuran Wang</a>,
+          <a href="https://wayrise.github.io//">Yuran Wang</a>,
           Shengqiang Xu,
-          <strong>Mingleyang Li,</strong>
+          <strong class="author-self">Mingleyang Li,</strong>
           <a href="https://zsdonghao.github.io/">Hao Dong</a>,
           <a href="https://warshallrho.github.io/">Ruihai Wu&dagger;</a>
           <br>
-          <small>(*equal contribution, &dagger;corresponding author)</small>
-          <br>
-          <span class="paper-links-group"><a href="https://arxiv.org/abs/2605.10201">Paper</a> / <a href="https://yzmyalier.github.io/HeteroGenManip/">Project</a> / <a href="https://github.com/YzmYalier/HeteroGenManip">Code</a></span>
+          <span class="paper-links-group"><a class="link-with-icon" href="https://arxiv.org/abs/2605.10201"><svg class="link-icon" aria-hidden="true"><use href="#icon-paper"></use></svg>Paper</a> / <a class="link-with-icon" href="https://yzmyalier.github.io/HeteroGenManip/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project</a> / <a class="link-with-icon" href="https://github.com/YzmYalier/HeteroGenManip"><svg class="link-icon" aria-hidden="true"><use href="#icon-code"></use></svg>Code</a></span>
           <br>
           Under Review
           <details class="paper-details">
@@ -254,12 +296,14 @@
       <!-- Paper 1: GarmentPile++ -->
       <tr class="paper-row highlight-paper" onmouseout="paper1_stop()" onmouseover="paper1_start()">
         <td style="padding:5px;width:30%;vertical-align:middle;">
-          <div class="one" id="paper1_one">
-            <img src="images/works/garmentpile2/teaser.png" alt="Paper teaser" />
-            <div class="two" id="paper1_two">
-              <img src="images/works/garmentpile2/pipeline.png" alt="Paper pipeline" />
+          <a class="paper-project-visual" href="https://garmentpile2.github.io/" aria-label="Open the GarmentPile++ project page">
+            <div class="one" id="paper1_one">
+              <img src="images/works/garmentpile2/teaser.png" alt="Paper teaser" />
+              <div class="two" id="paper1_two">
+                <img src="images/works/garmentpile2/pipeline.png" alt="Paper pipeline" />
+              </div>
             </div>
-          </div>
+          </a>
           <script type="text/javascript">
             function paper1_start() {
               swapPaperImage("paper1_one", "paper1_two", true);
@@ -271,11 +315,12 @@
           </script>
         </td>
         <td style="padding:15px;width:70%;vertical-align:middle;">
-          <a href="#">
+          <a class="paper-project-title" href="https://garmentpile2.github.io/">
             <papertitle>GarmentPile++: Affordance-Driven Cluttered Garments Retrieval with Vision-Language Reasoning</papertitle>
           </a>
-          <strong>Mingleyang Li*,</strong>
-          <a href="https://scholar.google.com/citations?user=4DJfGOMAAAAJ">Yuran Wang*</a>,
+          <strong class="author-self">Mingleyang Li*,</strong>
+          <a href="https://wayrise.github.io//">Yuran Wang*</a>,
+          <br>
           <a href="https://yuechen0614.github.io/">Yue Chen</a>,
           <a href="https://tianxingchen.github.io/">Tianxing Chen</a>,
           <a href="https://github.com/SCreatorX">Jiaqi Liang</a>,
@@ -284,9 +329,7 @@
           <a href="https://warshallrho.github.io/">Ruihai Wu&dagger;</a>,
           <a href="https://zsdonghao.github.io/">Hao Dong&dagger;</a>
           <br>
-          <small>(*equal contribution, &dagger;corresponding author)</small>
-          <br>
-          <span class="paper-links-group"><a href="https://arxiv.org/abs/2603.04158">Paper</a> / <a href="https://garmentpile2.github.io/">Project</a> / <a href="https://github.com/d-finite/GarmentPile2">Code</a></span>
+          <span class="paper-links-group"><a class="link-with-icon" href="https://arxiv.org/abs/2603.04158"><svg class="link-icon" aria-hidden="true"><use href="#icon-paper"></use></svg>Paper</a> / <a class="link-with-icon" href="https://garmentpile2.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project</a> / <a class="link-with-icon" href="https://github.com/d-finite/GarmentPile2"><svg class="link-icon" aria-hidden="true"><use href="#icon-code"></use></svg>Code</a></span>
           <br>
           <em>ICRA 2026</em>
           <details class="paper-details">
