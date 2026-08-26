@@ -20,6 +20,7 @@
   --link-color: #2563eb;
   --link-hover: #1d4ed8;
   --paper-link-gradient: linear-gradient(105deg, #2563eb 0%, #0891b2 48%, #f59e0b 100%);
+  --paper-separator-blue: #123a6d;
 
   /* Display typography */
   --font-heading: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
@@ -619,6 +620,13 @@ em {
 /* Paper links (Paper/Project/Code/Bibtex) */
 .paper-links-group {
   color: var(--link-color);
+  font-weight: 600;
+}
+
+.paper-link-separator {
+  display: inline-block;
+  margin: 0 0.35em;
+  color: var(--paper-separator-blue);
   font-weight: 600;
 }
 
