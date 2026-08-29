@@ -81,7 +81,101 @@ a:hover {
 }
 
 .profile-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 15px;
+  margin-top: 14px;
   text-align: center;
+}
+
+.profile-intro + .profile-intro {
+  margin-top: 9px;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.profile-link:hover {
+  color: var(--accent-orange);
+}
+
+.profile-link__icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.profile-link__icon--round {
+  border-radius: 50%;
+}
+
+.profile-details {
+  margin-top: 10px;
+}
+
+.profile-details summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--link-color);
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.4;
+  list-style: none;
+  transition: color 0.2s ease-out;
+}
+
+.profile-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.profile-details summary::after {
+  width: 6px;
+  height: 6px;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  content: "";
+  transform: rotate(45deg) translate(-1px, -1px);
+  transition: transform 0.25s ease;
+}
+
+.profile-details[open] summary::after {
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+
+.profile-details summary:hover {
+  color: var(--accent-orange);
+}
+
+.profile-details summary:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
+.profile-details__content {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-left: 2px solid rgba(37, 99, 235, 0.18);
+  color: var(--text-secondary);
+  animation: paper-details-reveal 0.24s ease-out;
+}
+
+.profile-details__content p {
+  margin: 0;
+}
+
+.profile-details__content p + p {
+  margin-top: 7px;
 }
 
 .page-section {
@@ -824,6 +918,14 @@ em {
     text-align: left;
   }
 
+  .profile-links {
+    justify-content: center;
+  }
+
+  .profile-details summary {
+    font-size: 12.5px;
+  }
+
   /* Adjust spacing for paper links */
   .paper-links a {
     display: inline-block;
@@ -852,10 +954,12 @@ em {
   .section-nav__indicator,
   .section-nav__link,
   .section-title::after,
+  .profile-details summary::after,
   .paper-details summary::after {
     transition: none;
   }
 
+  .profile-details__content,
   .paper-details p {
     animation: none;
   }
