@@ -55,13 +55,6 @@ a:hover {
   color: var(--accent-orange);
 }
 
-.icon-sprite {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
 .link-with-icon {
   display: inline-flex;
   align-items: center;
@@ -74,17 +67,17 @@ a:hover {
   width: 0.9em;
   height: 0.9em;
   flex: 0 0 auto;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.8;
 }
 
 .link-icon--brand {
   width: 1em;
   height: 1em;
   object-fit: contain;
+}
+
+.link-icon--project {
+  width: 1.15em;
+  height: 1.15em;
 }
 
 .github-stars {
