@@ -5,20 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Mingleyang Li ｜ 李铭乐洋" />
     <title>Mingleyang Li | 李铭乐洋</title>
-    <link rel="stylesheet" href="stylesheet.css?v=20260829-20" />
+    <link rel="stylesheet" href="stylesheet.css?v=20260909-1" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
-      <symbol id="icon-paper" viewBox="0 0 24 24">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
-        <path d="M14 2v6h6M8 13h8M8 17h8"></path>
-      </symbol>
       <symbol id="icon-project" viewBox="0 0 24 24">
         <rect x="3" y="3" width="18" height="18" rx="2"></rect>
         <path d="M3 9h18M9 21V9"></path>
-      </symbol>
-      <symbol id="icon-code" viewBox="0 0 24 24">
-        <path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14"></path>
       </symbol>
     </svg>
 
@@ -113,7 +106,7 @@
             My research currently centers on World Action Models (WAMs): predictive models that learn how the physical world evolves under robot actions. I am particularly interested in action-conditioned representations, model architectures, scalable training, and systematic evaluation, with the broader goal of building robot agents that can anticipate the consequences of their actions and interact more effectively with the real world.
             <span class="representative-line">
               Representative works are <strong>highlighted</strong>.<br>
-              <small class="paper-meta-note">(*equal contribution, &dagger;corresponding author)</small>
+              <small class="paper-meta-note">(*equal contribution, &dagger;corresponding author, &Dagger;project lead)</small>
             </span>
           </p>
         </td>
@@ -150,6 +143,72 @@
       }
     </script>
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:845px;">
+      <!-- OpenWAM -->
+      <tr class="paper-row highlight-paper" onmouseout="openwam_stop()" onmouseover="openwam_start()">
+        <td style="padding:5px;width:30%;vertical-align:middle;">
+          <a class="paper-project-visual" href="https://openwam-official.github.io/" aria-label="Open the OpenWAM project page">
+            <div class="one show" id="openwam_one">
+              <img src="images/works/openwam/overview.png" alt="OpenWAM infrastructure, controlled studies, and pretrained model overview" />
+              <div class="two" id="openwam_two">
+                <img src="images/works/openwam/architecture.png" alt="OpenWAM-α architecture and pretraining recipe" />
+              </div>
+            </div>
+          </a>
+          <script type="text/javascript">
+            function openwam_start() {
+              swapPaperImage("openwam_one", "openwam_two", true);
+            }
+            function openwam_stop() {
+              swapPaperImage("openwam_one", "openwam_two", false);
+            }
+          </script>
+        </td>
+        <td style="padding:15px;width:70%;vertical-align:middle;">
+          <a class="paper-project-title" href="https://openwam-official.github.io/">
+            <papertitle>OpenWAM: An Open, Modular Exploration Towards Systematic World–Action Model Pretraining</papertitle>
+          </a>
+          <a href="https://wayrise.github.io//">Yuran Wang*&Dagger;</a>,
+          Siqiao Huang*&Dagger;,
+          <strong class="author-self">Mingleyang Li*,</strong>
+          Chenhao Zhang*,
+          <a href="https://github.com/SCreatorX">Jiaqi Liang*</a>,
+          <br>
+          Weiyang Jin,
+          <a href="https://yuechen0614.github.io/">Yue Chen</a>,
+          Xuemin Chi,
+          Donghao Zhou,
+          Qize Yu,
+          Yu-Kai Wang,
+          Yuhan Rui,
+          Shenzhe Yao,
+          Zhen Yuan,
+          <a href="https://github.com/stubborn111">Zhenhao Shen</a>,
+          Kefei Zhu,
+          Zijie Zhu,
+          Ning Gao,
+          Xiaowei Chi,
+          Guanqi He,
+          Shanghang Zhang,
+          <a href="https://zsdonghao.github.io/">Hao Dong</a>,
+          Lin Shao&dagger;,
+          Hang Zhao&dagger;
+          <br>
+          <span class="paper-links-group paper-links-group--extended">
+            <span class="paper-link-item"><a class="link-with-icon" href="https://arxiv.org/abs/2609.07398"><img class="link-icon link-icon--brand" src="assets/files/icon/arxiv.svg" width="16" height="16" alt="" />Paper</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://openwam-official.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project Page</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" data-github-repo="OpenWAM-Official/OpenWAM" href="https://github.com/OpenWAM-Official/OpenWAM"><img class="link-icon link-icon--brand" src="assets/files/icon/github.svg" width="16" height="16" alt="" /><span>Code<span class="github-stars" hidden> (<span class="github-star-count"></span> <span class="star-emoji" aria-hidden="true">⭐</span>)</span></span></a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://huggingface.co/OpenWAM"><img class="link-icon link-icon--brand" src="assets/files/icon/huggingface.svg" width="16" height="16" alt="" />Hugging Face</a></span>
+          </span>
+          <br>
+          arXiv 2026
+          <details class="paper-details">
+            <summary>More details</summary>
+            <p>
+              OpenWAM is an open research stack for systematic World–Action Model pretraining, bringing together modular infrastructure (OpenWAM-Infra), controlled studies of model design and training (OpenWAM-Study), and an open pretrained model (OpenWAM-α) for robot manipulation.
+            </p>
+          </details>
+        </td>
+      </tr>
       <!-- Paper 4: XPolicyLab (co-author, not highlighted) -->
       <tr class="paper-row" onmouseout="paper4_stop()" onmouseover="paper4_start()">
         <td style="padding:5px;width:30%;vertical-align:middle;">
@@ -182,7 +241,11 @@
           <strong class="author-self">Mingleyang Li,</strong>
           &hellip;
           <br>
-          <span class="paper-links-group"><a class="link-with-icon" href="https://arxiv.org/abs/2608.09892"><svg class="link-icon" aria-hidden="true"><use href="#icon-paper"></use></svg>Paper</a><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://xpolicylab.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project</a><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://github.com/XPolicyLab/XPolicyLab"><svg class="link-icon" aria-hidden="true"><use href="#icon-code"></use></svg>Code</a></span>
+          <span class="paper-links-group">
+            <span class="paper-link-item"><a class="link-with-icon" href="https://arxiv.org/abs/2608.09892"><img class="link-icon link-icon--brand" src="assets/files/icon/arxiv.svg" width="16" height="16" alt="" />Paper</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://xpolicylab.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project Page</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" data-github-repo="XPolicyLab/XPolicyLab" href="https://github.com/XPolicyLab/XPolicyLab"><img class="link-icon link-icon--brand" src="assets/files/icon/github.svg" width="16" height="16" alt="" /><span>Code<span class="github-stars" hidden> (<span class="github-star-count"></span> <span class="star-emoji" aria-hidden="true">⭐</span>)</span></span></a></span>
+          </span>
           <br>
           Under Review
           <details class="paper-details">
@@ -237,7 +300,11 @@
           <a href="https://zsdonghao.github.io/">Hao Dong&dagger;</a>,
           <a href="http://luoping.me/">Ping Luo&dagger;</a>
           <br>
-          <span class="paper-links-group"><a class="link-with-icon" href="https://arxiv.org/abs/2603.01229"><svg class="link-icon" aria-hidden="true"><use href="#icon-paper"></use></svg>Paper</a><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://rmbench.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project</a><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://github.com/robotwin-Platform/rmbench"><svg class="link-icon" aria-hidden="true"><use href="#icon-code"></use></svg>Code</a></span>
+          <span class="paper-links-group">
+            <span class="paper-link-item"><a class="link-with-icon" href="https://arxiv.org/abs/2603.01229"><img class="link-icon link-icon--brand" src="assets/files/icon/arxiv.svg" width="16" height="16" alt="" />Paper</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://rmbench.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project Page</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" data-github-repo="robotwin-Platform/rmbench" href="https://github.com/robotwin-Platform/rmbench"><img class="link-icon link-icon--brand" src="assets/files/icon/github.svg" width="16" height="16" alt="" /><span>Code<span class="github-stars" hidden> (<span class="github-star-count"></span> <span class="star-emoji" aria-hidden="true">⭐</span>)</span></span></a></span>
+          </span>
           <br>
           Under Review
           <details class="paper-details">
@@ -283,7 +350,11 @@
           <a href="https://zsdonghao.github.io/">Hao Dong</a>,
           <a href="https://warshallrho.github.io/">Ruihai Wu&dagger;</a>
           <br>
-          <span class="paper-links-group"><a class="link-with-icon" href="https://arxiv.org/abs/2605.10201"><svg class="link-icon" aria-hidden="true"><use href="#icon-paper"></use></svg>Paper</a><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://yzmyalier.github.io/HeteroGenManip/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project</a><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://github.com/YzmYalier/HeteroGenManip"><svg class="link-icon" aria-hidden="true"><use href="#icon-code"></use></svg>Code</a></span>
+          <span class="paper-links-group">
+            <span class="paper-link-item"><a class="link-with-icon" href="https://arxiv.org/abs/2605.10201"><img class="link-icon link-icon--brand" src="assets/files/icon/arxiv.svg" width="16" height="16" alt="" />Paper</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://yzmyalier.github.io/HeteroGenManip/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project Page</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" data-github-repo="YzmYalier/HeteroGenManip" href="https://github.com/YzmYalier/HeteroGenManip"><img class="link-icon link-icon--brand" src="assets/files/icon/github.svg" width="16" height="16" alt="" /><span>Code<span class="github-stars" hidden> (<span class="github-star-count"></span> <span class="star-emoji" aria-hidden="true">⭐</span>)</span></span></a></span>
+          </span>
           <br>
           Under Review
           <details class="paper-details">
@@ -330,7 +401,11 @@
           <a href="https://warshallrho.github.io/">Ruihai Wu&dagger;</a>,
           <a href="https://zsdonghao.github.io/">Hao Dong&dagger;</a>
           <br>
-          <span class="paper-links-group"><a class="link-with-icon" href="https://arxiv.org/abs/2603.04158"><svg class="link-icon" aria-hidden="true"><use href="#icon-paper"></use></svg>Paper</a><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://garmentpile2.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project</a><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://github.com/d-finite/GarmentPile2"><svg class="link-icon" aria-hidden="true"><use href="#icon-code"></use></svg>Code</a></span>
+          <span class="paper-links-group">
+            <span class="paper-link-item"><a class="link-with-icon" href="https://arxiv.org/abs/2603.04158"><img class="link-icon link-icon--brand" src="assets/files/icon/arxiv.svg" width="16" height="16" alt="" />Paper</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://garmentpile2.github.io/"><svg class="link-icon" aria-hidden="true"><use href="#icon-project"></use></svg>Project Page</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" data-github-repo="d-finite/GarmentPile2" href="https://github.com/d-finite/GarmentPile2"><img class="link-icon link-icon--brand" src="assets/files/icon/github.svg" width="16" height="16" alt="" /><span>Code<span class="github-stars" hidden> (<span class="github-star-count"></span> <span class="star-emoji" aria-hidden="true">⭐</span>)</span></span></a></span>
+          </span>
           <br>
           <em>ICRA 2026</em>
           <details class="paper-details">
@@ -415,12 +490,13 @@
         <td><p style="text-align:center">
           This homepage is designed based on <a href="https://jonbarron.info/">Jon Barron</a>'s website and deployed on <a href="https://pages.github.com/">Github Pages</a>.
           <br>
-          Last updated: Aug. 29, 2026
+          Last updated: Sep. 9, 2026
           <br>
           © 2026 Mingleyang Li
         </p>
       </tr>
     </table>
     <script src="navigation.js"></script>
+    <script src="github-stars.js?v=20260909-1"></script>
   </body>
 </html>

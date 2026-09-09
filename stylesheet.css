@@ -67,6 +67,7 @@ a:hover {
   align-items: center;
   gap: 4px;
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 .link-icon {
@@ -78,6 +79,20 @@ a:hover {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.8;
+}
+
+.link-icon--brand {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+}
+
+.github-stars {
+  font-variant-numeric: tabular-nums;
+}
+
+.star-emoji {
+  -webkit-text-fill-color: initial;
 }
 
 .profile-links {
@@ -711,10 +726,19 @@ em {
   color: var(--accent-orange);
 }
 
-/* Paper links (Paper/Project/Code/Bibtex) */
+/* Research resource links */
 .paper-links-group {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 3px;
   color: var(--link-color);
   font-weight: 600;
+}
+
+.paper-link-item {
+  display: inline-flex;
+  align-items: center;
 }
 
 .paper-link-separator {
@@ -739,7 +763,6 @@ em {
 .paper-links-group a:hover {
   color: var(--link-color);
   background-position: 100% 50%;
-  filter: saturate(1.15);
 }
 
 @media (max-width: 1170px) {
@@ -937,6 +960,17 @@ em {
   table[style*="max-width:800px"] {
     max-width: 100% !important;
     padding: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paper-links-group--extended {
+    display: inline-grid;
+    grid-template-columns: max-content max-content;
+  }
+
+  .paper-links-group--extended .paper-link-item:nth-child(3) .paper-link-separator {
+    display: none;
   }
 }
 
