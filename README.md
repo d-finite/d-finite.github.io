@@ -10,7 +10,8 @@ remains `Code`. No API token or build step is needed.
 
 OpenWAM's authors, links, and overview figure come from its [official project page](https://openwam-official.github.io/).
 Its hover figure, `images/works/openwam/infra.png`, is rendered from the supplied `infra.pdf`.
-GroundingPI's authors, links, poster, and architecture figure come from its [official project page](https://groundingpi.github.io/).
+GroundingPI's authors, links, and architecture figure come from its [official project page](https://groundingpi.github.io/).
+Its teaser is rendered from `figures/teaser.pdf` in the [arXiv v1 source](https://arxiv.org/src/2609.39601v1), matching Figure 1 on the paper's first page.
 Its author-role symbols are mapped to this homepage's legend († corresponding author, ‡ project lead).
 The arXiv mark comes from [Simple Icons](https://github.com/simple-icons/simple-icons/blob/develop/icons/arxiv.svg),
 the GitHub mark from [GitHub Octicons](https://github.com/primer/octicons/blob/main/icons/mark-github-16.svg),
