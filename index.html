@@ -83,6 +83,7 @@
       <tr>
         <td style="padding:0px 16px 16px 36px;width:100%;vertical-align:middle">
           <ul class="compact-list">
+            <li>[2026/10] 🎉 <a href="https://xpolicylab.github.io/">XPolicyLab</a> received the <strong>Best Tool Paper Award</strong> at the IROS 2026 ScaleInfra Workshop.</li>
             <li>[2026/06] 🎉 I received the <strong>SenseTime Scholarship</strong> as the youngest recipient, one of 30 undergraduates selected nationwide.</li>
             <li>[2026/01] 🎉 One paper was accepted to ICRA 2026.</li>
           </ul>
@@ -202,6 +203,74 @@
           </details>
         </td>
       </tr>
+      <!-- GroundingPI (co-author, not highlighted) -->
+      <tr class="paper-row" onmouseout="groundingpi_stop()" onmouseover="groundingpi_start()">
+        <td style="padding:5px;width:30%;vertical-align:middle;">
+          <a class="paper-project-visual" href="https://groundingpi.github.io/" aria-label="Open the GroundingPI project page">
+            <div class="one show" id="groundingpi_one">
+              <img src="images/works/groundingpi/poster.jpg" alt="GroundingPI visual grounding demonstration" />
+              <div class="two" id="groundingpi_two">
+                <img src="images/works/groundingpi/architecture.png" alt="GroundingPI model architecture and visual primitive output tokens" />
+              </div>
+            </div>
+          </a>
+          <script type="text/javascript">
+            function groundingpi_start() {
+              swapPaperImage("groundingpi_one", "groundingpi_two", true);
+            }
+            function groundingpi_stop() {
+              swapPaperImage("groundingpi_one", "groundingpi_two", false);
+            }
+          </script>
+        </td>
+        <td style="padding:15px;width:70%;vertical-align:middle;">
+          <a class="paper-project-title" href="https://groundingpi.github.io/">
+            <papertitle>GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives</papertitle>
+          </a>
+          <a href="https://skywalker-yqz.github.io/">Qize Yu*&Dagger;</a>,
+          <a href="https://github.com/fan159159">Lianrui Fan*</a>,
+          <a href="https://boyuchen2004.github.io/">Boyu Chen*</a>,
+          <a href="https://screatorx.github.io/SCreatorX/">Jiaqi Liang*</a>,
+          <a href="https://github.com/AshleyD707">Xini Ding*</a>,
+          <br>
+          <a href="https://yuechen0614.github.io/">Yue Chen</a>,
+          Zetian Song,
+          <a href="https://wayrise.github.io/">Yuran Wang</a>,
+          Yi Zou,
+          <a href="https://openreview.net/profile?id=%7EKaixuan_Wang3">Kaixuan Wang</a>,
+          <a href="https://tianxingchen.github.io/">Tianxing Chen</a>,
+          <a href="https://songwxuan.github.io/">Wenxuan Song</a>,
+          <a href="https://zhoubohan0.github.io/">Bohan Zhou</a>,
+          <strong class="author-self">Mingleyang Li,</strong>
+          <a href="https://knightnemo.github.io/">Siqiao Huang</a>,
+          <a href="https://github.com/haha-yuki-haha">Yuqi Ye</a>,
+          <a href="https://hk.linkedin.com/in/caigao-jiang-309710194">Caigao Jiang</a>,
+          Wei Wei,
+          <a href="https://warshallrho.github.io/">Ruihai Wu</a>,
+          <a href="https://hangzhang.org/">Hang Zhang</a>,
+          <a href="https://geyixiao.com/">Yixiao Ge</a>,
+          <a href="https://zsc.github.io/">Shuchang Zhou</a>,
+          <a href="https://lsl.zone/">Shilong Liu</a>,
+          <a href="https://www.linkedin.com/in/xianming-liu-07264326">Xianming Liu</a>,
+          <a href="https://luoping.me/">Ping Luo&dagger;</a>,
+          <a href="https://huangshiyu13.github.io/">Shiyu Huang&dagger;</a>
+          <br>
+          <span class="paper-links-group paper-links-group--extended">
+            <span class="paper-link-item"><a class="link-with-icon" href="https://arxiv.org/abs/2609.39601"><img class="link-icon link-icon--brand" src="assets/files/icon/arxiv.svg" width="16" height="16" alt="" />Paper</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://groundingpi.github.io/"><img class="link-icon link-icon--brand link-icon--project" src="assets/files/icon/project-page.svg" width="16" height="16" alt="" />Project Page</a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" data-github-repo="groundingpi/GroundingPI" href="https://github.com/groundingpi/GroundingPI"><img class="link-icon link-icon--brand" src="assets/files/icon/github.svg" width="16" height="16" alt="" /><span>Code<span class="github-stars" hidden> (<span class="github-star-count"></span> <span class="star-emoji" aria-hidden="true">⭐</span>)</span></span></a></span>
+            <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" href="https://huggingface.co/GroundingPI/GroundingPI"><img class="link-icon link-icon--brand" src="assets/files/icon/huggingface.svg" width="16" height="16" alt="" />Hugging Face</a></span>
+          </span>
+          <br>
+          arXiv 2026
+          <details class="paper-details">
+            <summary>More details</summary>
+            <p>
+              GroundingPI is a 4B grounding foundation model that represents points and boxes as visual primitives and transfers precise perception to robotic manipulation and autonomous driving.
+            </p>
+          </details>
+        </td>
+      </tr>
       <!-- Paper 4: XPolicyLab (co-author, not highlighted) -->
       <tr class="paper-row" onmouseout="paper4_stop()" onmouseover="paper4_start()">
         <td style="padding:5px;width:30%;vertical-align:middle;">
@@ -240,11 +309,13 @@
             <span class="paper-link-item"><span class="paper-link-separator" aria-hidden="true">|</span><a class="link-with-icon" data-github-repo="XPolicyLab/XPolicyLab" href="https://github.com/XPolicyLab/XPolicyLab"><img class="link-icon link-icon--brand" src="assets/files/icon/github.svg" width="16" height="16" alt="" /><span>Code<span class="github-stars" hidden> (<span class="github-star-count"></span> <span class="star-emoji" aria-hidden="true">⭐</span>)</span></span></a></span>
           </span>
           <br>
-          <strong><em>IROS 2026 @ ScaleInfra, <span style="color: #ff0000;">Oral Presentation</span></em></strong>
+          <strong><em>IROS 2026 @ ScaleInfra, <span style="color: #ff0000;">Best Tool Paper Award</span> (Oral Presentation)</em></strong>
+          <br>
+          <strong><em>ICRA 2026 @ ScaleInfra, <span style="color: #ff0000;">Best Tool Paper Award</span></em></strong>
           <details class="paper-details">
             <summary>More details</summary>
             <p>
-              XPolicyLab is a unified standard and open ecosystem that reduces N-policy-to-M-environment integration from O(NM) to O(N+M), standardizing installation, serving, and evaluation for 42 robot policies across simulation and real-robot platforms.
+              XPolicyLab is a unified standard and open ecosystem that reduces N-policy-to-M-environment integration from O(NM) to O(N+M), standardizing installation, serving, and evaluation across simulation and real-robot platforms, with 48 robot policies integrated as of September 2026.
             </p>
           </details>
         </td>
@@ -483,7 +554,7 @@
         <td><p style="text-align:center">
           This homepage is designed based on <a href="https://jonbarron.info/">Jon Barron</a>'s website and deployed on <a href="https://pages.github.com/">Github Pages</a>.
           <br>
-          Last updated: Sep. 9, 2026
+          Last updated: Oct. 7, 2026
           <br>
           © 2026 Mingleyang Li
         </p>
