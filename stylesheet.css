@@ -407,6 +407,54 @@ p {
   margin-top: 4px;
 }
 
+/* Shared organization columns for Experience and Education. */
+.affiliation-table {
+  width: 100%;
+  max-width: 845px;
+  margin: 0 auto;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+}
+
+.affiliation-logo-cell {
+  width: 18%;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.affiliation-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+}
+
+.affiliation-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 111px;
+  object-fit: contain;
+}
+
+.affiliation-logo--seal {
+  /* About 95% of its former 117px desktop width, centered in the wider column. */
+  width: 111px;
+  max-width: 95%;
+}
+
+.affiliation-details {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.affiliation-period {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .paper-details {
   margin-top: 9px;
 }
@@ -875,6 +923,32 @@ em {
   /* Personal info section - stack avatar and text vertically */
   table tr td {
     padding: 16px !important;
+  }
+
+  .affiliation-table {
+    display: table;
+  }
+
+  .affiliation-table tbody {
+    display: table-row-group;
+  }
+
+  .affiliation-table tr {
+    display: table-row;
+  }
+
+  .affiliation-table td {
+    display: table-cell;
+    width: auto !important;
+  }
+
+  .affiliation-table .affiliation-logo-cell {
+    width: 29% !important;
+    padding: 12px 5px !important;
+  }
+
+  .affiliation-table .affiliation-details {
+    padding: 12px 10px !important;
   }
 
   .name {

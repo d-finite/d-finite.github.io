@@ -2,6 +2,9 @@
 
 Personal academic homepage built with static HTML and CSS for GitHub Pages.
 
+Organization logos use the [Naive AI brand lockup](https://naive.ai/assets/brand/naive-lockup.svg)
+and the [Wuji Technology logo from the supplied reference homepage](https://knightnemo.github.io/assets/img/wuji.svg).
+
 Research links use local brand SVGs and `github-stars.js`. A Code link with
 `data-github-repo="owner/repository"` loads its star count from GitHub's public API.
 Counts are cached for 15 minutes and refreshed while the page is visible. If a
